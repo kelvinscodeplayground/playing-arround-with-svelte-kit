@@ -10,7 +10,8 @@
 	}
 
 	onMount(() => {
-		const current = document.querySelector('html')?.getAttribute('data-theme');
+		const defualt = document.querySelector('html')?.getAttribute('data-theme');
+		const current = 
 		theme = current || 'latte';
 	});
 </script>

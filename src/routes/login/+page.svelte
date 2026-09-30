@@ -5,7 +5,7 @@
 
 	$effect(() => {
 		if ($authStore?.username) {
-			goto(resolve('/(authed)/dashboard'));
+			goto(resolve('/_'));
 		}
 	});
 
@@ -27,7 +27,11 @@
 
 		authStore.set({ username });
 
-		goto(resolve('/(authed)/dashboard'));
+		goto(resolve('/_'));
+	}
+
+	function backToHome() {
+		goto(resolve('/'));
 	}
 </script>
 
@@ -40,5 +44,8 @@
 		<input type="password" name="password" class="input w-full" placeholder="Password" />
 
 		<button type="submit" class="btn mt-2 btn-primary">Login</button>
+		<button class="btn btn-outline btn-primary" type="button" onclick={backToHome}>
+			Back to Home
+		</button>
 	</form>
 </main>
