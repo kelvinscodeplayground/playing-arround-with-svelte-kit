@@ -1,0 +1,11 @@
+@import 'tailwindcss';
+
+@plugin 'daisyui' {
+	themes: false;
+}
+@plugin './themes/catppuccinTheme.latte.ts';
+@plugin './themes/catppuccinTheme.mocha.ts';
+
+html {
+	@apply bg-base-300;
+}
